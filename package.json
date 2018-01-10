@@ -1,0 +1,29 @@
+{
+  "name": "scatterplot-graph",
+  "version": "1.0.0",
+  "description": "data vizualitation project from freecodecamp curriculum",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon -e js,css,html -i client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luiko",
+  "license": "MIT",
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.17",
+    "d3": "^4.12.2",
+    "hapi": "^17.2.0",
+    "hapi-webpack": "^1.0.0",
+    "html-loader": "^0.5.4",
+    "html-webpack-plugin": "^2.30.1",
+    "inert": "^5.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "eslint": "^4.14.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  }
+}
