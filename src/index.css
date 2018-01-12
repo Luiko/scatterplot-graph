@@ -11,6 +11,34 @@ header, fotter {
   color: darkkhaki;
 }
 
+main {
+  display: -webkit-flex;
+  display: flex;
+}
+
+#tooltip {
+  display: none;
+  position: absolute;
+  left: 25%;
+  font-size: 0.9rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: lightcyan;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.75rem;
+  border: 2px solid lightcyan;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+svg {
+  margin: auto;
+  overflow: scroll;
+}
+
+circle {
+  z-index: -2;
+}
+
 g, path, line {
   stroke: lightcyan;
 }

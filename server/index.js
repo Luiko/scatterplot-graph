@@ -1,8 +1,7 @@
 const Hapi = require('hapi');
-// const webpack = require('hapi-webpack');
 const inert = require('inert');
 const webpack = require('webpack');
-const options = require('../webpack.config');
+const options = require('../webpack.config.js');
 
 const server = Hapi.Server({
   port: 3000,
@@ -17,7 +16,8 @@ const build = () => new Promise(
 }))
 
 const start = async () => {
-  await build();
+  if (process.env.NODE_ENV === 'development')
+    await build();
   await server.register(inert);
 
   server.route({
@@ -25,7 +25,7 @@ const start = async () => {
     path: '/{param*}',
     handler: {
       directory: {
-        path: 'client',
+        path: 'docs',
         index: true
       }
     }
